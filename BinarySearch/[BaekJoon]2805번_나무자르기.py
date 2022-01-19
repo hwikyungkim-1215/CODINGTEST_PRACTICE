@@ -8,7 +8,7 @@ start = 1
 end = max(h)
 
 # 이분 탐색(상한)
-while start < end:
+while start <= end:
     mid = (start+end) // 2
     sum = 0 # 벌목된 나무 길이 합계
     for i in h:
@@ -18,6 +18,6 @@ while start < end:
     if sum >= m: # 합계가 크면 자르는 높이H 증가
         start = mid + 1
     else:
-        end = mid
+        end = mid - 1
 
-print(end-1)
+print(end)

@@ -5,7 +5,7 @@ N = int(input())
 cost = list(map(int, input().split()))
 M = int(input())
 start, end = 0, max(cost)
-ytr
+
 # 이분 탐색
 while start <= end:
     mid = (start+end) // 2
