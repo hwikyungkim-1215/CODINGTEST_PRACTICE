@@ -1,7 +1,7 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-N, M = map(int,input().split())
+N, M = map(int, input().split())
 
 b = []
 A = []
@@ -23,20 +23,23 @@ for number in deletes:
             # number의 인덱스 찾기
             for i in range(len(arr)):
                 if arr[i] == number:
+                    # 앞 거리
                     count = i
+                    # 뒤 거리
                     count2 = len(arr)-count
                     break
             # 왼쪽이 더 가까운 경우
             if count < count2:
                 for i in range(count):
+                    # arr.rotate(-1)
                     arr.append(arr.popleft())
                 result += count
 
             # 오른 쪽이 더 가까운 경우
             else:
                 for i in range(count2):
+                    # arr.rotate(1)
                     arr.appendleft(arr.pop())
                 result += count2
-
 
 print(result)

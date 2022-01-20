@@ -3,7 +3,7 @@ import sys
 
 input = sys.stdin.readline
 N = int(input())
-# [(0, 3), (1, 2), (2, 1), (3, -3), (4, -1)] 으로 저장
+# 인덱스랑 같이 저장하기: [(0, 3), (1, 2), (2, 1), (3, -3), (4, -1)] 으로 저장
 arr = deque(enumerate(map(int, input().split())))
 result = []
 
@@ -17,7 +17,8 @@ while True:
         break
     # 오른 쪽으로 이동
     if count > 0:
-        arr.rotate(-(count-1))
+        arr.rotate(-(count - 1))
+        #arr.rotate(-(count-1)) #확인해보기!!!
     # 왼쪽으로 이동
     else:
         arr.rotate(-count)

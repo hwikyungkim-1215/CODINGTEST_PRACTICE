@@ -1,3 +1,31 @@
+'''
+이진 검색 (Binary Search): bisect_left / bisect_right
+bisect_left(a, x) #하한
+정렬된 a에 x를 삽입할 위치를 리턴해준다. x가 a에 이미 있으면 기존 항목의 앞 (왼쪽)의 위치를 반환한다.
+
+bisect_right(a, x) # 상한
+bisect_left와 거의 같은 함수인데, 이번에는 x가 a에 이미 있으면 기존 항목 뒤 (오른쪽)의 위치를 반환한다.
+'''
+
+from bisect import bisect_left, bisect_right
+import sys
+
+input = sys.stdin.readline
+N, M = map(int, input().rstrip().split())
+arr = list(map(int, input().split()))
+arr.sort()
+
+for _ in range(M):
+    # 입력받은 두 점 이진탐색
+    a, b = map(int, input().rstrip().split())
+    #0 3
+    start_num = bisect_left(arr, a)
+    end_num = bisect_right(arr, b)
+
+    print(end_num - start_num)
+
+
+'''
 import sys
 
 input = sys.stdin.readline
@@ -31,3 +59,4 @@ for _ in range(M):
 
 for i in range(M):
     print(result[i])
+'''

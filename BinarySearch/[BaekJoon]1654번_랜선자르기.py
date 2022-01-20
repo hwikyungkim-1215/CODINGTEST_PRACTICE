@@ -1,3 +1,4 @@
+# 나무자르기 문제와 동일
 K, N = map(int, input().split())
 arr = []
 sum = 0
@@ -8,9 +9,9 @@ arr.sort()
 start = 1
 end = max(arr)
 
-# 이분 탐색(상한)
+# 이분 탐색
 while start <= end:
-    # 매번 초기회
+    # 매번 초기화
     count = 0
     mid = (start+end) // 2
     # mid로 각 나무 자른 개수 합
