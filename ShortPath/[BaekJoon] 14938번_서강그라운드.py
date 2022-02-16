@@ -39,7 +39,7 @@ for g in graph:
     ans = 0
     for i in range(1, n + 1):
         if g[i] <= m: # 제한 거리
-                ans += item[i - 1]
+            ans += item[i - 1]
     # 이전 시작 점들과 비교**
     result = max(result, ans)
 
