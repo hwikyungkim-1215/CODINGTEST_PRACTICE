@@ -18,7 +18,6 @@ for y in range(n):
     raw = [int(x) for x in input().split()]
 
     for x in range(m):
-        # ??
         g[y][x] = raw[x]
         if g[y][x] == 0:
             empty_list.append([y, x])

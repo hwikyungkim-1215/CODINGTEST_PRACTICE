@@ -1,5 +1,5 @@
 from itertools import combinations, product
-
+# 내가 짠 코드, 백준에서 시간초과 남
 
 # 소수 찾는 알고리즘(에라토스테네스의 체)
 def prime_list(n):
@@ -16,14 +16,15 @@ def prime_list(n):
     return [i for i in range(2, n) if sieve[i] == True]
 
 result = []
-c = []
-a = []
-b = []
+
 result = 0
 j1 = 0
 
 # 두 소수의 합 = n
 def sum(n):
+    c = []
+    a = []
+    b = []
     li = prime_list(n) # 소수
     com = [i for i in combinations(li,2)]
 
