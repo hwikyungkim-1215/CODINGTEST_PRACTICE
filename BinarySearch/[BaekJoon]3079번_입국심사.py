@@ -2,7 +2,7 @@ import sys
 
 input = sys.stdin.readline
 n, m = map(int, input().split())
-t = list(map(int, input().split())) #시간
+t = sorted(list(int(input()) for _ in range(n)))
 
 start = 0
 end = min(t) * m #가장 긴 시간
