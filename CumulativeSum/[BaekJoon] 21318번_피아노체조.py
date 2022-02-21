@@ -16,7 +16,7 @@ for i in range(n):
         dp[i] = dp[i-1] + 1 # 누적
     else:
         dp[i] = dp[i-1]
-
+print(dp)
 
 for i in range(int(input())):
     a, b = map(int, input().split())

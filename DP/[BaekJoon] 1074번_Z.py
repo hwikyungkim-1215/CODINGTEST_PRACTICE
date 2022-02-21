@@ -2,7 +2,6 @@
 # 개수, 행, 열
 n, r, c = map(int,input().split())
 
-n, r, c = map(int, input().split())
 num = -1
 
 
