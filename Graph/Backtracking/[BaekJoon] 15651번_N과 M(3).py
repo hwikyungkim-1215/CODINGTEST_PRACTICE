@@ -1,4 +1,4 @@
-# 중복 불가, 오름차순 출가
+# 중복 허용, 사전 순 출력
 n, m = map(int, input().split())
 result = [0] * (m+1)
 
@@ -9,7 +9,6 @@ def solve(depth):
         print()
     else:
         for i in range(1,n+1):
-            if max(result) < i:
                 result[depth] = i  # 방문한 번호 입력
                 solve(depth+1)  # 깊이 우선 탐색
                 result[depth] = 0  # 방문 내용 제거
